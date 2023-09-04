@@ -1,0 +1,40 @@
+:root {
+    --main: #47a820;
+    --mainLight: #4ab81e;
+    --light:#dae6ee;
+    --dark:#1d1a21;
+}
+
+html {
+    scroll-behavior: smooth; 
+}
+
+*,
+*::before,
+* {
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+ul,ol,li{
+    list-style: none;
+}
+
+input{
+    display: none;
+}
+
+body{
+    box-sizing: border-box;
+}
+
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    background-color: var(--dark);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
