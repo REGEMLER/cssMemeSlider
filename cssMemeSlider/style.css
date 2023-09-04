@@ -1,6 +1,7 @@
 :root {
     --main: #47a820;
     --mainLight: #4ab81e;
+    --second: #f7c82f;
     --light:#dae6ee;
     --dark:#1d1a21;
 }
@@ -34,7 +35,88 @@ body{
 .wrapper{
     width: 100%;
     margin: 0 auto;
-    height: 100vh;
+    padding: 1rem;
     background-color: var(--dark);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title{
+    width: 100%;
+    margin: 1rem auto;
+    color: var(--main);
+    text-align: center;
+}
+
+.memes{
+    max-width: 80%;
+    margin: 1rem auto;
+    overflow: hidden;
+}
+
+.memes__slider{
+    display: flex;
+    height: 40rem;
+    object-fit: cover;
+    transition: all linear 1s;
+}
+
+.memes__item{
+    min-width: 100%;
+    height: 100%;
+}
+
+.texts{
+    max-width: 80%;
+    margin: 1rem auto;
+    overflow: hidden; 
+    text-align: center;
+}
+
+.texts__slider{
+    display: flex;
+    transition: all linear 1s;
+}
+
+.text{
+    min-width: 100%;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.02rem;
+    color: #fff;
+    text-shadow: 0 0 0.625rem black;
+}
+
+.controls{
+    width: 70%;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: 1px solid red;
+}
+ 
+.control {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-clip: content-box;
+    background-color: var(--second);
+    outline: 0.2rem solid var(--second);
+    outline-offset: -0.75rem;
+    cursor: pointer;
+    transition: all 0.7s linear;
+}
+  
+.control:hover {
+    outline-color: var(--mainLight);
+}
+  
+.control:active {
+    background-color: var(--main);
+}
+  
+input:checked + .control {
+    background-color: transparent;
 }
